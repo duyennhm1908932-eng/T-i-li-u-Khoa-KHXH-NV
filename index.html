@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Tài liệu ôn tập</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0b5c2b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+.box{
+    background:white;
+    width:360px;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,.25);
+}
+h2{color:#0b5c2b;}
+input{
+    width:90%;
+    padding:12px;
+    font-size:18px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    margin-top:20px;
+}
+button{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    background:#0b5c2b;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+}
+button:hover{background:#08431f;}
+#error{color:red;margin-top:15px;}
+#success{color:green;margin-top:15px;}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>TÀI LIỆU ÔN TẬP</h2>
+
+<p>Nhập mật khẩu để truy cập</p>
+
+<input type="password" id="pass" placeholder="Nhập mật khẩu">
+
+<button onclick="checkPassword()">Đăng nhập</button>
+
+<p id="error"></p>
+<p id="success"></p>
+
+</div>
+
+<script>
+
+function checkPassword(){
+
+var password="123456";
+
+var drive="https://drive.google.com/";
+
+if(document.getElementById("pass").value==password){
+
+document.getElementById("success").innerHTML="Đăng nhập thành công...";
+
+setTimeout(function(){
+window.location.href=drive;
+},1000);
+
+}else{
+
+document.getElementById("error").innerHTML="Sai mật khẩu!";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
